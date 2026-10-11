@@ -1,0 +1,40 @@
+name: 🔭 分析・データの依頼
+description: 「この地域・このデータを見てほしい」という依頼
+title: "[依頼] "
+labels: ["analysis-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        見てほしい地域やデータ、知りたいことを書いてください。分かる範囲で大丈夫です。
+  - type: input
+    id: area
+    attributes:
+      label: 地域・対象
+      description: 市区町村、駅の周り、施設など
+      placeholder: 例）仙台市青葉区
+  - type: textarea
+    id: question
+    attributes:
+      label: 知りたいこと（問い）
+      placeholder: 例）駅から歩いて15分で行ける範囲に、避難所はいくつあるか
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: 使えそうなデータ
+      description: URL・出典・ライセンスが分かれば書いてください
+      placeholder: 例）https://www.geospatial.jp/ （CC BY 4.0）
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 何に使いたいか
+      description: 研究、地域の活動、個人的な興味など
+  - type: checkboxes
+    id: public
+    attributes:
+      label: 公開の確認
+      options:
+        - label: この依頼と分析の結果が公開されることに同意します
+          required: true
