@@ -1,0 +1,23 @@
+name: 💬 質問・アイデア
+description: 使い方の質問・機能のアイデア・雑談に近い提案
+title: "[質問] "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: 知りたいこと・提案
+      placeholder: 聞きたいことや思いついたアイデアを自由に
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景・試したこと
+      description: 関連する状況や、すでに試したことがあれば
+  - type: input
+    id: ai_tool
+    attributes:
+      label: AI ツール使用
+      description: AI が作った報告・コードを含む場合はツール名を書いてください（例: Devin, Copilot）。未使用なら空欄でOK
+      placeholder: AI-generated:
